@@ -28,7 +28,7 @@
     # Unix tools
     ripgrep # Better `grep`
     fd
-    sd
+    # sd
     tree
 
     # Nix dev
@@ -40,7 +40,7 @@
     nix-health
 
     # Dev
-    tmate
+    # tmate
 
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.
@@ -56,7 +56,7 @@
   programs = {
     # on macOS, you probably don't need this
     bash = {
-      enable = true;
+      enable = false;
       initExtra = ''
         # Make Nix and home-manager installed things available in PATH.
         export PATH=/run/current-system/sw/bin/:/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:$PATH
@@ -65,7 +65,7 @@
 
     # For macOS's default shell.
     zsh = {
-      enable = true;
+      enable = false;
       envExtra = ''
         # Make Nix and home-manager installed things available in PATH.
         export PATH=/run/current-system/sw/bin/:/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:$PATH
@@ -73,16 +73,16 @@
     };
 
     # Better `cd`
-    bat.enable = true;
+    bat.enable = false;
     # Type `z <pat>` to cd to some directory
-    zoxide.enable = true;
+    zoxide.enable = false;
     # Type `<ctrl> + r` to fuzzy search your shell history
-    fzf.enable = true;
-    jq.enable = true;
-    htop.enable = true;
+    fzf.enable = false;
+    jq.enable = false;
+    htop.enable = false;
 
     starship = {
-      enable = true;
+      enable = false;
       settings = {
         username = {
           style_user = "blue bold";
@@ -103,13 +103,13 @@
 
     # https://nixos.asia/en/direnv
     direnv = {
-      enable = true;
-      nix-direnv.enable = true;
+      enable = false;
+      nix-direnv.false = true;
     };
 
     # https://nixos.asia/en/git
     git = {
-      enable = true;
+      enable = false;
       # userName = "John Doe";
       # userEmail = "johndoe@example.com";
       ignores = [ "*~" "*.swp" ];
@@ -121,7 +121,7 @@
         # pull.rebase = "false";
       };
     };
-    lazygit.enable = true;
+    lazygit.enable = false;
 
   };
 }
