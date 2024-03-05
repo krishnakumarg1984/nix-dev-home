@@ -9,7 +9,7 @@ A [`home-manager`](https://github.com/nix-community/home-manager) template provi
     ```sh-session
     mkdir ~/nixconfig
     cd ~/nixconfig
-    nix flake init -t github:krishnakumar/nix-dev-home
+    nix flake init -t github:krishnakumarg1984/nix-dev-home
     nix run .#sd "runner" "$USER" flake.nix
     ```
     - Optionally, you may edit `./home/default.nix` to your liking.

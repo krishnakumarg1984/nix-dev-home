@@ -104,7 +104,7 @@
     # https://nixos.asia/en/direnv
     direnv = {
       enable = false;
-      nix-direnv.false = true;
+      nix-direnv.enable = false;
     };
 
     # https://nixos.asia/en/git
